@@ -34,7 +34,7 @@ figma.ui.onmessage = async (msg: {text: string, type: string}) => {
           for (const text of textNode.characters.toString().split('\n')) {
             const isWhitespaceString = (text: string) => !/\S/.test(text);
 
-            if (!text.endsWith('.') && !isWhitespaceString(text)) {
+            if (!text.endsWith('.') && !text.endsWith('?') && !text.endsWith('!') && !isWhitespaceString(text)) {
               resultString += text + '.\n';
             }
             else {
