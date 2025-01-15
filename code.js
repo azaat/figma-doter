@@ -56,7 +56,7 @@ figma.ui.onmessage = (msg) => __awaiter(void 0, void 0, void 0, function* () {
                     resultString += text + '\n';
                 }
             }
-            textNode.characters = resultString;
+            textNode.characters = resultString.trim();
         }
     }
     figma.closePlugin();

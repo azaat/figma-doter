@@ -61,7 +61,7 @@ figma.ui.onmessage = async (msg: {text: string, type: string}) => {
         }
       }
 
-      textNode.characters = resultString;
+      textNode.characters = resultString.trim();
     }
   }
   figma.closePlugin();
